@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        footer{
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background-color:grey;
+            color:white;
+            margin-top:5px;
+        }
+        input{
+        margin : 20px;
+        }
+    </style>
+</head>
+<body class="text-center">
+    <h2>Login</h2>
+    <form method="POST" action="login" class="m-5">
+        {% csrf_token %}
+        <input type="text" name="uname" placeholder="Username"><br>
+        <input type="password" name="pass" placeholder="Password"><br>
+        <input type="submit">
+    </form>
+
+    <div>
+        {% for message in messages%}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+    <footer>
+        <p>Done By Rishi Raj G</p>
+    </footer>
+</body>
+</html>

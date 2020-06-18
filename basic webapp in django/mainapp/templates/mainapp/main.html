@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        input{
+            margin-bottom:5px;
+        }
+        footer{
+            float:bottom;
+            width:100%;
+            background-color:grey;
+            color:white;
+            margin-top:5px;
+            text-align:center;
+            height:40px;
+        }
+    </style>
+</head>
+<body>
+{%if user.is_authenticated %}
+    <p>Logged In, Welcome {{user.first_name}}</p>
+    <a href="accounts/logout" style="float:right;"><button>Log Out</button></a>
+    <div style="margin:10px;">
+        <h2>Add People:</h2>
+        <form method="POST" action="main">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="phone" name="phone" placeholder="Phone"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="text" name="addr" placeholder="Address"><br>
+            <input type="submit" value="Add" class = "btn btn-success"><br>
+        </form>
+        <h2>People Details:</h2>
+        {% for i in all_people %}
+
+        <ul>
+            <h3>{{i.name}}</h3>
+            <li>{{i.email}}</li>
+            <li>{{i.phno}}</li>
+            <li>{{i.addr}}</li>
+        </ul>
+        {% endfor %}
+        {% else %}
+        <script>
+            window.alert("You must be logged in to view this page");
+            window.location='accounts/login';
+        </script>
+        {%endif%}
+    </div>
+    <footer>
+        <p>Done By Rishi Raj G</p>
+    </footer>
+</body>
+</html>
