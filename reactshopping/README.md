@@ -7,6 +7,7 @@ Download and install Node js [Here](https://nodejs.org/en/download/)
 
 ### Command to check whether Nodejs is installed
 `node -v` displays the version of node installed.
+if `'node' is not recognized as an internal or external command` is displayed then check the Installation.
 
 ## Available Scripts
 
