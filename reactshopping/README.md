@@ -1,8 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shopping Cart in React js with cool UI
+
+## Requirements
+
+Node js Latest LTS Version: 12.18.1 (includes npm 6.14.5)
+Download and install Node js [Here](https://nodejs.org/en/download/)
+
+### Command to check whether Nodejs is installed
+`node -v` displays the version of node installed.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i`
+
+Installs the necessary packages and node modules which are required for the project
 
 ### `npm start`
 
@@ -43,26 +55,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
