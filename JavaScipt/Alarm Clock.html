@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>js</p>
+    <div id="clock"></div>
+    <form id="f">
+        <input type="text" name="hr" placeholder="hour">
+        <input type="text" name="mn" placeholder="minute">
+        <input type="text" name="sc" placeholder="second"><br>
+        <button onclick="alm()">Submit</button>
+    </form>
+    <div id="create"></div>
+    <div id="alarm"></div>
+    <script>
+        function clk(){
+            time = new Date();
+            var h=time.getHours();
+            var m=time.getMinutes();
+            var s=time.getSeconds();
+            var session="AM";
+            if(h==0)
+            h=12;
+            if(h>12){
+            h=h-12;
+            session="PM"
+            }
+            if(h<10)
+            h="0"+h;
+            if(m<10)
+            m="0"+m;
+            if(s<10)
+            s="0"+s;
+
+            var t=h+ ":" + m + ":" +s+""+session;
+            
+            document.getElementById("clock").innerText=t;
+
+            var hr=document.getElementById("f").elements[0].value;
+            var mn = document.getElementById("f").elements[1].value;
+            var sc = document.getElementById("f").elements[2].value;
+            document.getElementById("alarm").innerText=hr;
+            if(hr==h){
+                if(mn==m){
+                    if(sc==s){
+                        document.getElementById("alarm").innerText="alarm";
+                    }
+                }
+            }
+        }
+        setInterval(clk,1000);
+        function alm(){
+            document.getElementById("create").innerText="Alarm Created Successfully";
+        }
+    </script>
+</body>
+</html>
